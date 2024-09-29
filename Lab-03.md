@@ -95,6 +95,23 @@ aws s3api put-object --bucket $BUCKET_NAME --body $FILENAME --key $OBJECT_KEY
 
 ```
 
+# Delete the bucket itself
+
+```sh
+#!/bin/bash
+
+if [ -z $1 ]; then
+  echo "Bucket name required"
+  exit 1
+fi
+
+# Step 1: Empty the bucket
+aws s3 rm s3://$BUCKET_NAME --recursive
+
+# Step 2: Delete the bucket
+aws s3api delete-bucket --bucket $BUCKET_NAME --region ca-central-1
+
+```
 
 
 
