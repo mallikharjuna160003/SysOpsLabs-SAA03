@@ -16,6 +16,12 @@
 ## uploading the files to S3 bucket
 - For generally upload the image in s3 bucket create by drag and drop.
   ![image](https://github.com/user-attachments/assets/50c53e61-361b-469b-b8f7-dd2a83832408)
+- For permissions and destination
+  ![image](https://github.com/user-attachments/assets/c9a9c199-b23a-4fee-8fb6-dae534014e3d)
+- Storage Class
+  ![image](https://github.com/user-attachments/assets/14884247-67f0-4d62-8d39-94c70c9e881f)
+- For tagging to object and checksum for more encryption etc..
+ ![image](https://github.com/user-attachments/assets/54bde492-3b7b-4c3c-9b4b-876487105695)
 
 
 
