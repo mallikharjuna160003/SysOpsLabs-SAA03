@@ -41,3 +41,6 @@ AWS cli autopromt will prompt the cli commands
 <br/>
 <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters-prompting.html"> CLI autoprompt </a>
 
+<br>
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-services-s3-commands.html"> Practice</a>
+<a href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3api/index.html"> S3api </a>
