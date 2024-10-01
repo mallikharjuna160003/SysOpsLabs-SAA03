@@ -70,6 +70,11 @@ After this try to perform the CRUD operations on the other account Highlevel aws
 
 ![image](https://github.com/user-attachments/assets/f522bdf4-c98c-4626-aff0-3ddbc90819c7)
 
+![image](https://github.com/user-attachments/assets/ed5b08f7-01de-4fd8-8dd4-9cff0afa85d4)
+
+In production never use the '*' in configuration it will allows every cross domain.
+
+![image](https://github.com/user-attachments/assets/7bc116d0-d355-4ffa-bd54-9d3df807245e)
 
 
 
