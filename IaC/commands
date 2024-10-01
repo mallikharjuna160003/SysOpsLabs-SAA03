@@ -1,0 +1,11 @@
+terraform init
+
+terraform apply
+
+aws s3 ls
+
+aws s3 ls s3://terraform-20241001014547090100000001
+
+
+aws s3 cp s3://terraform-20241001014547090100000001/myfile.txt - &&  cat -
+
