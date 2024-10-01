@@ -64,6 +64,12 @@ aws s3api list-buckets --query Owner.ID --output text
 ```
 After this try to perform the CRUD operations on the other account Highlevel aws s3 commands
 
+![image](https://github.com/user-attachments/assets/f22dfd38-c8c9-4b7c-8f9f-fbfdf36c3215)
+
+![image](https://github.com/user-attachments/assets/3889f0f0-6fe2-42bd-97ef-388fb7e6cafc)
+
+![image](https://github.com/user-attachments/assets/f522bdf4-c98c-4626-aff0-3ddbc90819c7)
+
 
 
 
