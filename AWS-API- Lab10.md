@@ -48,9 +48,9 @@ Resources:
         Version: "2012-10-17"
         Statement:
           - Effect: Allow
-            Principal:
-              Service:
-                - s3.amazonaws.com
+            Principal: "arn:aws:iam::533834059331:user/sts-machine-user"
+              #Service:
+              #  - s3.amazonaws.com
             Action:
               - 'sts:AssumeRole'
       Path: /
