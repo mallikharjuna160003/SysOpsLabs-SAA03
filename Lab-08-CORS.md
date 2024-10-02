@@ -92,3 +92,33 @@ policy.json
    ]
 }
 ```
+
+# raising cors issue
+- Create an api using API gateway
+- add it into the html script tag call using XHR request. Boom got the cors issue check on network tab. Make sure enable cors on apigateway api.
+
+## Fixing cors
+```sh
+aws s3api put-bucket-cors --bucket MyBucket --cors-configuration file://cors.json
+```
+Replace this "http://www.example.com" with the apigateway api
+
+cors.json:
+```json
+{
+  "CORSRules": [
+    {
+      "AllowedOrigins": ["http://www.example.com"],
+      "AllowedHeaders": ["*"],
+      "AllowedMethods": ["PUT", "POST", "DELETE"],
+      "MaxAgeSeconds": 3000,
+      "ExposeHeaders": ["x-amz-server-side-encryption"]
+    }
+  ]
+}
+```
+
+
+
+
+
