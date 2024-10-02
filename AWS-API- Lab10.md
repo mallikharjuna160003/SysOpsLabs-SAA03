@@ -48,7 +48,8 @@ Resources:
         Version: "2012-10-17"
         Statement:
           - Effect: Allow
-            Principal: "arn:aws:iam::533834059331:user/sts-machine-user"
+            Principal:
+              AWS: "arn:aws:iam::<account-id>:user/sts-machine-user"
               #Service:
               #  - s3.amazonaws.com
             Action:
@@ -99,7 +100,7 @@ aws cloudformation deploy   --template-file template.yaml   --stack-name my-new-
     {
       "Effect": "Allow",
       "Action": "s3:AssumeRole",
-      "Resource": "arn:aws:iam::533834059331:role/my-new-stack-StsRole-0LzF0vMwS4JT"
+      "Resource": "arn:aws:iam::<account-id>:role/my-new-stack-StsRole-0LzF0vMwS4JT"
     }
   ]
 }
@@ -129,14 +130,129 @@ aws iam put-user-policy \
     --policy-document file://policy.json
 
 aws sts assume-role \
-    --role-arn arn:aws:iam::533834059331:role/my-new-stack-StsRole-0LzF0vMwS4JT \
+    --role-arn arn:aws:iam::<account-id>:role/my-new-stack-StsRole-0LzF0vMwS4JT \
     --role-session-name s3-sts-fun
     --profile default
+```
+assume role creation is for temporary access to aws resource.
+```sh
+# update the role policy to allow the sysops user to assumeroles.
+aws iam update-assume-role-policy \
+    --role-name my-new-stack-StsRole-ABiCr0weaoj3 \
+    --policy-document '{
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "AWS": [
+              "arn:aws:iam::<account-id>:user/sts-machine-user",
+              "arn:aws:iam::<account-id>:user/sysops"
+            ]
+          },
+          "Action": "sts:AssumeRole"
+        }
+      ]
+    }' --profile default
+
+aws sts assume-role     --role-arn arn:aws:iam::<account-id>:role/my-new-stack-StsRole-ABiCr0weaoj3     --role-session-name UniqueSessionName     --profile sts
+```
+Now update the ~/.aws/credentials file with the below update the values make changes 
+```sh
+[assumed]
+aws_access_key_id = <key-id>
+aws_secret_access_key = <secret-key>
+aws_session_token = <token>
+```
+Check the assumed role permissions and identity
+```sh
+aws sts get-caller-identity --profile assumed
+aws s3 ls --profile assumed
+```
+```json
+{
+    "Credentials": {
+        "AccessKeyId": "<id>",
+        "SecretAccessKey": "<key>",
+        "SessionToken": "<token>",
+        "Expiration": "2024-10-02T19:20:51+00:00"
+    },
+    "AssumedRoleUser": {
+        "AssumedRoleId": "<roleid>:UniqueSessionName",
+        "Arn": "arn:aws:sts::<accountid>:assumed-role/my-new-stack-StsRole-ABiCr0weaoj3/UniqueSessionName"
+    }
+}
+```
+
+Now update the template.yaml file with Service we deleted before under Principal object.
+```yaml
+Service:
+  - s3.amazonaws.com
+```
+
+Now update the template.yaml file, bcz with the previous changes assumed role is not able to list the buckets. now check after updating the cft stack.
+```yaml
+AWSTemplateFormatVersion: 2010-09-09
+Description: Create a role for us to assume and create resource we'll have access to
+Parameters:
+  BucketName:
+    Type: String
+    Default: "sts-fun-ab-1234"
+
+Resources:
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+    DeletionPolicy: Retain
+    Properties:
+      BucketName: !Ref BucketName
+
+  StsRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS: "arn:aws:iam::<account-id>:user/sts-machine-user"
+                #Service:
+                # - s3.amazonaws.com
+            Action:
+              - 'sts:AssumeRole'
+      Path: /
+      Policies:
+        - PolicyName: s3access
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: 's3:*'
+                Resource: [ 
+                   !Sub 'arn:aws:s3:::*',
+                   !Sub 'arn:aws:s3:::${BucketName}',
+                   !Sub 'arn:aws:s3:::${BucketName}/*'
+                ]
+  RootInstanceProfile:
+    Type: 'AWS::IAM::InstanceProfile'
+    Properties:
+      Path: /
+      Roles:
+        - !Ref StsRole # Corrected reference from RootRole to StsRole
 
 ```
 
+### Now teardown the cft stack on aws console
+```sh
+# delete policy
+aws iam delete-user-policy     --user-name sts-machine-user --policy-name AssumeRolePolicy
 
+# delete accesskey
+aws iam delete-access-key     --access-key-id <key-id>     --user-name sts-machine-user
 
+# delete user
+aws iam delete-user \
+    --user-name sts-machine-user
+```
 
 
 
