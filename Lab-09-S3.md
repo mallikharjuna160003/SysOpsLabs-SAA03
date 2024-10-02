@@ -77,10 +77,166 @@ aws s3api put-object --bucket encryption-fun-ab-123 \
 ![image](https://github.com/user-attachments/assets/44114883-5d82-4278-81b3-5a9aaaf19b15)
 
 ## Client side encryption
-```sh
+```py
+import boto3
+import os
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives import padding
 
+# Initialize AWS S3 client
+s3 = boto3.client('s3')
+
+# Your bucket name
+BUCKET_NAME = 'client-side-mugg'
+
+# Path to the file you want to upload
+FILE_PATH = 'your-file.txt'
+
+# Generate a 256-bit (32 bytes) key for AES
+KEY = os.urandom(32)
+
+def encrypt_data(data, key):
+    """Encrypt data using AES256 with CBC mode"""
+    iv = os.urandom(16)  # Initialization vector
+    cipher = Cipher(algorithms.AES(key), modes.CBC(iv), backend=default_backend())
+    encryptor = cipher.encryptor()
+    
+    # Padding to ensure the data is a multiple of block size
+    padder = padding.PKCS7(algorithms.AES.block_size).padder()
+    padded_data = padder.update(data) + padder.finalize()
+    
+    ciphertext = encryptor.update(padded_data) + encryptor.finalize()
+    
+    return iv + ciphertext  # Return the IV concatenated with the ciphertext
+
+def decrypt_data(encrypted_data, key):
+    """Decrypt AES256 encrypted data"""
+    iv = encrypted_data[:16]  # Extract the IV
+    ciphertext = encrypted_data[16:]  # The rest is ciphertext
+    
+    cipher = Cipher(algorithms.AES(key), modes.CBC(iv), backend=default_backend())
+    decryptor = cipher.decryptor()
+    
+    decrypted_padded_data = decryptor.update(ciphertext) + decryptor.finalize()
+    
+    # Remove padding
+    unpadder = padding.PKCS7(algorithms.AES.block_size).unpadder()
+    data = unpadder.update(decrypted_padded_data) + unpadder.finalize()
+    
+    return data
+
+# Read the file you want to upload
+with open(FILE_PATH, 'rb') as f:
+    file_data = f.read()
+
+# Encrypt the file data before uploading to S3
+encrypted_data = encrypt_data(file_data, KEY)
+
+# Upload the encrypted data to S3
+s3.put_object(Bucket=BUCKET_NAME, Key='encrypted-file.txt', Body=encrypted_data)
+print(f'Encrypted file uploaded to {BUCKET_NAME}/encrypted-file.txt')
+
+# Download the encrypted file from S3
+response = s3.get_object(Bucket=BUCKET_NAME, Key='encrypted-file.txt')
+downloaded_encrypted_data = response['Body'].read()
+
+# Decrypt the downloaded data
+decrypted_data = decrypt_data(downloaded_encrypted_data, KEY)
+
+# Save the decrypted data to a new file
+with open('decrypted-file.txt', 'wb') as f:
+    f.write(decrypted_data)
+
+print("File decrypted and saved as 'decrypted-file.txt'")
 
 ```
+![image](https://github.com/user-attachments/assets/0ebb4c8b-c75a-4bfd-bdf7-5090911e7737)
+
+![image](https://github.com/user-attachments/assets/f38bb5ee-7700-499f-80f8-bb3b80be0a2e)
+
+![image](https://github.com/user-attachments/assets/18b5da3e-fdf4-4a71-a26e-c3eb0fe3388d)
+
+![image](https://github.com/user-attachments/assets/bf8a8bbf-360c-4212-aa0e-9e667840a2e7)
+
+![image](https://github.com/user-attachments/assets/86446e97-3ed6-458b-8831-559db2319cd0)
+
+![image](https://github.com/user-attachments/assets/c9da95bd-76ce-4142-b923-84d89ac27f3f)
+
+![image](https://github.com/user-attachments/assets/57a2364b-a9fd-43c4-a018-902318e24207)
+
+![image](https://github.com/user-attachments/assets/b16162f4-e33e-47a7-896b-ae39d593fb38)
+
+![image](https://github.com/user-attachments/assets/a7ab9cdf-9f1d-4f8f-9370-b87041487beb)
+
+![image](https://github.com/user-attachments/assets/df3fe1fc-a39e-4f5a-b77b-87f6cbf19e82)
+
+![image](https://github.com/user-attachments/assets/b4912442-8863-41e8-be3a-9b4e62cad38d)
+
+![image](https://github.com/user-attachments/assets/93d0378b-cbf7-4433-bed9-4a80dc1ba435)
+
+![image](https://github.com/user-attachments/assets/72d0055a-a954-4446-a139-b37d0f918f1e)
+
+![image](https://github.com/user-attachments/assets/53a66874-5295-4cd3-80e2-59a22d338ea1)
+
+![image](https://github.com/user-attachments/assets/5961f4a1-9977-44dc-87a6-f0429d11d20f)
+
+![image](https://github.com/user-attachments/assets/695b2a47-ede1-4ab0-af46-9430ccbd1b41)
+
+![image](https://github.com/user-attachments/assets/09f4f3a6-b3d6-4dc6-ac41-d1237768d59a)
+
+![image](https://github.com/user-attachments/assets/0d00913e-6d7e-451c-851d-6c485e9f72c5)
+
+![image](https://github.com/user-attachments/assets/5c9ca6a5-c513-4fe1-ac43-168093210d15)
+
+![image](https://github.com/user-attachments/assets/fdeb4951-e200-403c-9acf-e8466ca9506b)
+
+# Event Driven Actions
+![image](https://github.com/user-attachments/assets/5f968621-3733-41e8-9970-d78301075a97)
+
+# Storage Class Analysis
+![image](https://github.com/user-attachments/assets/459d04a3-4c17-4ed1-af3d-aa17cba1fd81)
+
+# Storage Class Lens
+![image](https://github.com/user-attachments/assets/5871c2d1-1bd0-4246-a70a-ad05626e7e43)
+
+# S3 Event Notification
+![image](https://github.com/user-attachments/assets/654e35d5-0a92-45f7-82a9-b8220ad829b1)
+
+# S3 Storage Class Analysis
+![image](https://github.com/user-attachments/assets/fb500379-6c32-4ff5-8fe3-2c167f9bf922)
+
+# Storage Lens
+![image](https://github.com/user-attachments/assets/5e8deefa-891d-467a-b5f4-45c17554840a)
+
+# S3 static website hosting
+
+![image](https://github.com/user-attachments/assets/056d0715-8eff-482d-8e8b-a8164b32f63a)
+
+![image](https://github.com/user-attachments/assets/17e5dce2-eef8-4bfc-a9a6-fd82e135a3e4)
+
+![image](https://github.com/user-attachments/assets/2c51181d-258f-4f28-8c5c-43eb613b4341)
+
+![image](https://github.com/user-attachments/assets/c7e9b7c8-c5db-4096-8d53-993d21fb9e98)
+
+![image](https://github.com/user-attachments/assets/4d461e52-452d-4f94-b668-868c413f560b)
+
+![image](https://github.com/user-attachments/assets/fab74b3c-166a-4671-b112-1d5c90087065)
+
+![image](https://github.com/user-attachments/assets/edbfae78-8342-44a1-b166-8075f42c6924)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
