@@ -254,11 +254,48 @@ aws iam delete-user \
     --user-name sts-machine-user
 ```
 
+![image](https://github.com/user-attachments/assets/27b14cef-6511-4140-90d3-eb761beed500)
+
+![image](https://github.com/user-attachments/assets/78da1221-983b-4d2c-b90d-70d3a7e8b4d6)
+
+![image](https://github.com/user-attachments/assets/43da37fd-54b2-42f4-a896-ce70d770075c)
+
+![image](https://github.com/user-attachments/assets/1e3e1377-ca8b-4b48-965b-bd082b3c71ee)
+
+![image](https://github.com/user-attachments/assets/c34112e3-c47c-4b3d-ab88-a851799d73ce)
+
+![image](https://github.com/user-attachments/assets/3d0f22bb-04df-4936-b3d5-366780f7df96)
+
+![image](https://github.com/user-attachments/assets/da066667-4c27-40e2-84d1-90b8e29d3840)
+
+![image](https://github.com/user-attachments/assets/6d353855-bfce-48ea-8082-59485672d5ec)
+
+![image](https://github.com/user-attachments/assets/359974a7-e3ca-4cfc-91c1-d575a857eaf9)
+
+![image](https://github.com/user-attachments/assets/f0ad7cc1-265d-4e9b-b55d-6ed08774f56c)
+
+![image](https://github.com/user-attachments/assets/bf415731-f307-4b4b-a9b1-31028533e11b)
+
+![image](https://github.com/user-attachments/assets/ea599a74-44ae-4917-8dc6-4b039b5b73b3)
+
+![image](https://github.com/user-attachments/assets/53f4f547-6ad2-4f78-b135-09e1fcbbaa0b)
+
+![image](https://github.com/user-attachments/assets/1fbe18ea-6611-477d-8b39-81cb237733d6)
+
+![image](https://github.com/user-attachments/assets/54b26e7e-ce28-409c-a7b3-a6cbf0d43096)
+
+![image](https://github.com/user-attachments/assets/6a23498b-5964-4e21-a165-655e6a811caa)
+
+![image](https://github.com/user-attachments/assets/96fe4ce6-f13a-471d-af62-50ee6235f81e)
 
 
+![image](https://github.com/user-attachments/assets/b5ffde85-9514-4e75-8d8e-839728b9a28b)
 
+![image](https://github.com/user-attachments/assets/a25e976a-d510-46ad-88d0-3059eb31ca41)
 
+![image](https://github.com/user-attachments/assets/1069fce5-69fb-4d93-a7c1-9ad3c3743e05)
 
+![image](https://github.com/user-attachments/assets/8b11c237-3fdc-40e7-a7ed-6f0fde2b06a6)
 
 
 
