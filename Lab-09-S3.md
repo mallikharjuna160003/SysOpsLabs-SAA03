@@ -70,10 +70,15 @@ aws s3api put-object --bucket encryption-fun-ab-123 \
   --sse-customer-algorithm="AES256" \
   --sse-customer-key=$BASE64_ENCODED_KEY
 
+
+```
 ![image](https://github.com/user-attachments/assets/a6568f1e-7b16-48c5-a946-478bde15c3e0)
 
+![image](https://github.com/user-attachments/assets/44114883-5d82-4278-81b3-5a9aaaf19b15)
 
-#
+## Client side encryption
+```sh
+
 
 ```
 
