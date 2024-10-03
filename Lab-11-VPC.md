@@ -1,4 +1,4 @@
-# AWS - SAA 03
+![image](https://github.com/user-attachments/assets/c25a91c7-3f2a-4d30-abaf-da99e3ada5d2)# AWS - SAA 03
 ### VPC 
 ![image](https://github.com/user-attachments/assets/ed34c413-bbad-432d-a9a4-144e2d496ff2)
 
@@ -131,5 +131,137 @@ aws ec2 delete-vpc --vpc-id $VPC_ID || echo "VPC could not be deleted. Check for
 echo "All resources cleanup complete."
 
 ```
+![image](https://github.com/user-attachments/assets/b61287c0-54e0-4761-816b-85fa08b0414e)
+
+![image](https://github.com/user-attachments/assets/eefd256b-d202-4692-a1dd-addd7a37174e)
+
+![image](https://github.com/user-attachments/assets/383131cc-30dc-40fc-b83f-97f45b53229d)
+
+![image](https://github.com/user-attachments/assets/c1cbc11e-8ecd-49ef-ac86-95e506da3f11)
+
+![image](https://github.com/user-attachments/assets/0e60a902-78e7-4044-88a5-fea903ab2a48)
+
+# NACL
+![image](https://github.com/user-attachments/assets/25e26364-d791-4769-8d37-02c7e6261106)
+
+![image](https://github.com/user-attachments/assets/214a1172-9d0f-40ea-84b5-3c20a41cc5d0)
+
+![image](https://github.com/user-attachments/assets/c8963c4b-2b54-456f-88bd-0482979e9860)
+
+![image](https://github.com/user-attachments/assets/f6830104-f549-499b-9226-c6f8b7fd58e6)
+
+Create NACL
+```sh
+aws ec2 create-network-acl --vpc-id vpc-0b346576f3ad22b96
+```
+
+
+Launch VPC and subnet manaullay use it create ec2 and iam assume role.
+Grab the ami image from the console as it changes based on selected region.
+
+```yaml
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Launch an EC2 instance and install Apache with a custom index.html
+
+Parameters:
+  InstanceType:
+    Type: String
+    Default: t2.micro
+  VPCId:
+    Type: String
+    Default: vpc-0b346576f3ad22b96
+  ImageId:
+    Type: String
+    Default: ami-00da5f1c744fc2cc0
+  SubnetId:
+    Type: String
+    Default: subnet-0ea63509565fa2dea
+
+Resources:
+  SSMRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: 
+                - ec2.amazonaws.com
+            Action: 'sts:AssumeRole'
+      Policies:
+        - PolicyName: SSMAccessPolicy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - "ssm:*"
+                  - "ec2messages:*"
+                  - "cloudwatch:*"
+                  - "logs:*"
+                Resource: "*"
+
+  EC2InstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Roles:
+        - !Ref SSMRole 
+
+  SG:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow HTTP and SSH traffic
+      VpcId: !Ref VPCId
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+      SecurityGroupEgress:
+        - IpProtocol: -1
+          FromPort: -1
+          ToPort: -1
+          CidrIp: 0.0.0.0/0
+
+  MyEC2Instance: 
+    Type: AWS::EC2::Instance
+    Properties:
+      IamInstanceProfile: !Ref EC2InstanceProfile
+      InstanceType: !Ref InstanceType
+      ImageId: !Ref ImageId
+      SubnetId: !Ref SubnetId
+      SecurityGroupIds:
+        - !Ref SG
+      UserData: 
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          yum update -y
+          yum install -y httpd
+          systemctl start httpd
+          systemctl enable httpd
+          echo '<!DOCTYPE html>
+          <html>
+          <body>
+          <h1>My First Heading</h1>
+          <p>My first paragraph.</p>
+          </body>
+          </html>' > /var/www/html/index.html
+
+Outputs:
+  InstanceId:
+    Description: The Instance ID
+    Value: !Ref MyEC2Instance
+  InstancePublicIp:
+    Description: Public IP of the created EC2 instance
+    Value: !GetAtt MyEC2Instance.PublicIp
+```
+
+
+
 
 
