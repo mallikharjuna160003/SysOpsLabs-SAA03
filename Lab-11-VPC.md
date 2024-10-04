@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/c25a91c7-3f2a-4d30-abaf-da99e3ada5d2)# AWS - SAA 03
+![image](https://github.com/user-attachments/assets/1d8e832b-3d11-490e-8437-532113f6df87)![image](https://github.com/user-attachments/assets/c25a91c7-3f2a-4d30-abaf-da99e3ada5d2)# AWS - SAA 03
 ### VPC 
 ![image](https://github.com/user-attachments/assets/ed34c413-bbad-432d-a9a4-144e2d496ff2)
 
@@ -334,7 +334,104 @@ Work on below
 
 ![image](https://github.com/user-attachments/assets/095df2af-f83f-433e-8031-67743c622be3)
 
+
+![image](https://github.com/user-attachments/assets/03c71d1f-010e-4997-bb13-7ea6a8c42843)
+
+![image](https://github.com/user-attachments/assets/ce61871b-ef4a-4ee2-9d02-0f390781f73e)
+
 ![image](https://github.com/user-attachments/assets/57b89c41-d8f1-4956-9e13-e1fdd5de84e0)
+
+![image](https://github.com/user-attachments/assets/a9aef02a-1399-432b-ad74-c8c2a86a54be)
+# * Not shown up in exam *
+![image](https://github.com/user-attachments/assets/ae551468-65eb-4053-ba8b-651283f30a87)
+
+![image](https://github.com/user-attachments/assets/ce7bdf1e-22be-44c9-932b-251f359b6660)
+
+![image](https://github.com/user-attachments/assets/0afecf40-24cd-407c-91bd-639567027900)
+
+# VPC Endpoints
+
+![image](https://github.com/user-attachments/assets/4f159795-38b3-44d4-9913-b27dcb3300af)
+
+![image](https://github.com/user-attachments/assets/930b740b-6afe-42cf-9204-eef96b7765da)
+
+![image](https://github.com/user-attachments/assets/ad9aeef3-e03f-439a-b29f-cf0c680949d5)
+
+![image](https://github.com/user-attachments/assets/4f1066f4-8d00-4b20-8a34-dae4fc1bafe4)
+
+
+![image](https://github.com/user-attachments/assets/79ade05c-cabf-4777-be7a-d9050b225bdf)
+
+![image](https://github.com/user-attachments/assets/f7a81c1f-9349-481d-be1a-b0a76a84690c)
+
+![image](https://github.com/user-attachments/assets/d0b1c85a-b647-4d53-91e2-d0bd8261c172)
+
+![image](https://github.com/user-attachments/assets/0933ebc4-f187-43c7-9bb3-675ce3bdc135)
+
+![image](https://github.com/user-attachments/assets/a99cc890-95b5-4716-9613-1106efaa04bf)
+
+![image](https://github.com/user-attachments/assets/53069b85-9d60-4b39-8f0c-f2ca2c3bc26c)
+
+![image](https://github.com/user-attachments/assets/feea61cb-1645-4f56-baac-8330281d1992)
+
+![image](https://github.com/user-attachments/assets/069bd975-ef1c-462b-bffa-ad0208bdbf3b)
+
+![image](https://github.com/user-attachments/assets/2685c8b4-1145-481d-8c14-58adf8c007ad)
+
+![image](https://github.com/user-attachments/assets/bf227481-c767-4119-b6f5-e6ea6c8e49af)
+
+![image](https://github.com/user-attachments/assets/c8fc4f17-1f08-4dbc-9474-7a3b969f3830)
+
+![image](https://github.com/user-attachments/assets/1c630010-7480-4ad1-9fe0-661eeb41a05e)
+
+![image](https://github.com/user-attachments/assets/0aa32181-3167-43e1-a1fc-88e60b3fe986)
+
+![image](https://github.com/user-attachments/assets/1bf5dacf-6b88-43ed-bb84-2586fcb9060b)
+
+![image](https://github.com/user-attachments/assets/263eef87-15b3-4858-885b-c1d82984edc2)
+
+![image](https://github.com/user-attachments/assets/d54a0c3e-c20e-4822-8ba6-f6cacc6d20ed)
+
+![image](https://github.com/user-attachments/assets/177fdb0e-63b0-4df6-93ac-196c95a8e66d)
+
+
+![image](https://github.com/user-attachments/assets/2af8be76-9e60-4f21-a1b0-8dd0cfbefda9)
+
+![image](https://github.com/user-attachments/assets/788ff8e1-2513-459c-bbb1-dfcb0fcdcbfb)
+
+![image](https://github.com/user-attachments/assets/b89c021b-fe2d-4f9d-a99a-9a3227c5f0a0)
+
+![image](https://github.com/user-attachments/assets/27628bb9-820c-4b7f-978c-f92633093b9e)
+
+![image](https://github.com/user-attachments/assets/1362bf69-74a4-48ed-a5de-5e7c21213ff9)
+
+![image](https://github.com/user-attachments/assets/4e215d91-69df-45e0-ab2b-b12f91039c76)
+
+![image](https://github.com/user-attachments/assets/76c31639-8f27-4ad8-a4bc-288c2fdcd73c)
+
+
+![image](https://github.com/user-attachments/assets/66c10e7d-4325-4bcd-abde-5cdb2431a75a)
+
+![image](https://github.com/user-attachments/assets/fa422bcf-883c-4a37-806d-374fab423c5f)
+
+![image](https://github.com/user-attachments/assets/23408acf-ea5b-49bb-a296-eb2edb9e4a17)
+
+
+![image](https://github.com/user-attachments/assets/ccdebf96-8106-4cd2-8e05-28b4e673daa4)
+
+# Steps for VPC peering
+- Create two vpcs and use the nacl template to create the ec2 instances
+- using cli connect the peering  and add them to both the route tables
+- Try to access the other vpc ec2 instance httpd server via the curl in from not the same.
+
+![image](https://github.com/user-attachments/assets/c8dc7471-8ba0-441d-aac5-79bd473a8b07)
+
+![image](https://github.com/user-attachments/assets/767f04eb-b192-4cdf-b7d0-118a9676008b)
+
+![image](https://github.com/user-attachments/assets/b7e0a20d-cd60-44e3-9685-bd7edde6e959)
+
+![image](https://github.com/user-attachments/assets/73784f09-5940-4e53-a2ea-265bf2b821d0)
+
 
 
 
