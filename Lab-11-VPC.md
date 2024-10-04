@@ -153,6 +153,28 @@ echo "All resources cleanup complete."
 Create NACL
 ```sh
 aws ec2 create-network-acl --vpc-id vpc-0b346576f3ad22b96
+
+aws ec2 describe-network-acls --query "NetworkAcls[*].{ID: NetworkAclId, VpcId: VpcId, Rules: Entries}" --output table
+
+aws ec2 create-network-acl-entry \
+    --network-acl-id <your-nacl-id> \
+    --rule-number <rule-number> \
+    --protocol <protocol> \
+    --port-range From=<start-port>,To=<end-port> \
+    --cidr-block <source-cidr> \
+    --egress | --ingress \
+    --rule-action <allow|deny>
+# example
+
+aws ec2 create-network-acl-entry \
+    --network-acl-id nacl-abc12345 \
+    --rule-number 100 \
+    --protocol tcp \
+    --port-range From=80,To=80 \
+    --cidr-block 0.0.0.0/0 \
+    --ingress \
+    --rule-action allow
+
 ```
 
 
@@ -260,6 +282,22 @@ Outputs:
     Description: Public IP of the created EC2 instance
     Value: !GetAtt MyEC2Instance.PublicIp
 ```
+
+
+# Security Groups
+
+![image](https://github.com/user-attachments/assets/f53053f0-c790-494d-8b16-13f91e069312)
+
+![image](https://github.com/user-attachments/assets/972d47d3-2f02-4b93-9967-0dd022ea51d2)
+
+![image](https://github.com/user-attachments/assets/fa765c82-35c6-4c20-9235-cdf469f74aef)
+
+![image](https://github.com/user-attachments/assets/2f7743f3-4f0c-43c6-b595-ec0e32587f5c)
+
+![image](https://github.com/user-attachments/assets/22749a64-3fd5-4b5a-841a-722674ac53b1)
+
+
+
 
 
 
