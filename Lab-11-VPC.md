@@ -178,7 +178,7 @@ aws ec2 create-network-acl-entry \
 ```
 
 
-Launch VPC and subnet manaullay use it create ec2 and iam assume role.
+Launch VPC more manaullay use it create ec2 and iam assume role.
 Grab the ami image from the console as it changes based on selected region.
 
 ```yaml
@@ -297,9 +297,44 @@ Outputs:
 ![image](https://github.com/user-attachments/assets/22749a64-3fd5-4b5a-841a-722674ac53b1)
 
 
+for practice use the above template and manually change the sg rules inbound/outbound and with protocol and custom ip.
+
+![image](https://github.com/user-attachments/assets/96ee1485-26eb-4397-8eda-b3da1b203f1a)
+
+![image](https://github.com/user-attachments/assets/23c54ab8-3184-4c0b-b839-45f3253e33f9)
+
+![image](https://github.com/user-attachments/assets/320dc3de-02ec-4942-9d9a-8ee43973a3c2)
+
+![image](https://github.com/user-attachments/assets/0e9f5c79-f0a4-4954-9f90-5036280ce811)
+
+Practice via the aws console adding associating to subnets .
+
+# Gateways
+
+![image](https://github.com/user-attachments/assets/59666a68-f932-49d3-8efe-e46209c07c0a)
+
+# IGW
+![image](https://github.com/user-attachments/assets/6aeed006-3208-425d-a6e0-06fe50b8a68d)
+
+# EO-IGW
+![image](https://github.com/user-attachments/assets/599f8908-9650-4c84-909a-bd708fe3636b)
 
 
+Work on below
+- creating vpc only
+- create subnets private
+- add nat gateway to access internet
+- create ec2 instance
+- try to access the internet from the private subnet ec2 from nat gateway.
+- better try to work on aws console
 
+# Elastic IPs
+
+![image](https://github.com/user-attachments/assets/d8ef58e7-b2f7-4442-b65b-70febe10d47f)
+
+![image](https://github.com/user-attachments/assets/095df2af-f83f-433e-8031-67743c622be3)
+
+![image](https://github.com/user-attachments/assets/57b89c41-d8f1-4956-9e13-e1fdd5de84e0)
 
 
 
