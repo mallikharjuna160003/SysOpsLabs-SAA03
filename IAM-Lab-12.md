@@ -229,6 +229,66 @@ Retrieve instance metadata
 
 ![image](https://github.com/user-attachments/assets/a30a16a9-9e41-4612-a919-41d21d929f2d)
 
+![image](https://github.com/user-attachments/assets/c16f1d81-076b-40e5-a5af-903fe5e47aed)
+
+![image](https://github.com/user-attachments/assets/ae148ae3-18b3-45a7-8c9c-fd56d5bdaf39)
+
+EC2 instance connect through ssh keys
+![image](https://github.com/user-attachments/assets/b60b15f5-b121-4e3f-bc55-adbd092f90a7)
+
+![image](https://github.com/user-attachments/assets/d263e8b2-b45c-491c-a10b-e847dd8c1d81)
+
+![image](https://github.com/user-attachments/assets/d37e0bef-769f-4ba7-8529-cafdf90acf88)
+
+![image](https://github.com/user-attachments/assets/a9298b11-a0f1-4d23-94fb-e95c6a518849)
+
+![image](https://github.com/user-attachments/assets/9b387c14-60db-4d72-9c2e-25236058e76d)
+
+![image](https://github.com/user-attachments/assets/0c089a8a-9fbf-4aec-ac7e-7c6f1cbce664)
+
+![image](https://github.com/user-attachments/assets/ee909ca0-7e98-47ce-8d9c-3122c51f3138)
+
+![image](https://github.com/user-attachments/assets/cb9518d1-de54-4847-8fdc-6d065acc3e07)
+
+![image](https://github.com/user-attachments/assets/3665943e-2e07-4981-baf5-e9fadea5c35d)
+
+![image](https://github.com/user-attachments/assets/36c88351-ff7b-49e3-8ad6-f752a4ae7f03)
+
+![image](https://github.com/user-attachments/assets/7bb57f94-e2c3-4d94-91ff-71eb31e3059c)
+
+![image](https://github.com/user-attachments/assets/34523045-6259-41a9-b293-2a72453635f1)
+
+
+![image](https://github.com/user-attachments/assets/cf824047-8f82-4868-b233-e67db114a7fc)
+
+![image](https://github.com/user-attachments/assets/7bfbb8e9-8c3f-4385-a3eb-6b402ac559f8)
+
+![image](https://github.com/user-attachments/assets/370d6fee-b0f8-43e2-8a5c-4b57d77010b9)
+
+![image](https://github.com/user-attachments/assets/6adc8896-d2e4-4269-ac7c-382b7bce17a3)
+
+![image](https://github.com/user-attachments/assets/57b00923-9d43-4d0a-b3d7-620e2e21ae6a)
+
+![image](https://github.com/user-attachments/assets/bdc1ef79-9d7d-4a7e-b2a8-ba9df5b094a3)
+
+Creating image 
+![image](https://github.com/user-attachments/assets/7ac1e41f-a264-476d-9e38-e45ed52f8074)
+
+![image](https://github.com/user-attachments/assets/1bc7802b-f1f8-4fa0-9dfd-3e3dd894069e)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
