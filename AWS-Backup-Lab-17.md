@@ -53,8 +53,27 @@ WHERE table_schema NOT IN ('information_schema', 'mysql', 'performance_schema', 
 
 ![image](https://github.com/user-attachments/assets/5b2b7e83-91f5-4b32-b589-f3eebd003227)
 
+![image](https://github.com/user-attachments/assets/40791cde-0d0a-447a-a605-6008ae440798)
+
+![image](https://github.com/user-attachments/assets/e1a4686f-9536-4a44-b42d-22bdce87cc62)
 
 
+![image](https://github.com/user-attachments/assets/c2d0e233-4c58-4b58-a605-de40e8be1642)
+
+For Demo try on aws console.
+- Create a dynamodb
+- create appsync and attach dynamodb
+- add some data into dynamodb
+- query in appsync
+- Install amplify
+
+```sh
+npm install aws-amplify
+```
+grab the related query to perform on the dynamodb using the appsync with javascript
+<a href="https://docs.amplify.aws/">official doc for amplify</a>
+
+![image](https://github.com/user-attachments/assets/77efb890-3ab1-4c37-8648-71f4f06e6087)
 
 
 
