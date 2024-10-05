@@ -75,6 +75,14 @@ grab the related query to perform on the dynamodb using the appsync with javascr
 
 ![image](https://github.com/user-attachments/assets/77efb890-3ab1-4c37-8648-71f4f06e6087)
 
+![image](https://github.com/user-attachments/assets/79ec54bd-d6e3-4bbf-bc6d-8578882bca63)
+
+[bit messy better stay away :)]
+Create an ECR to place the image into aws from the demo.
+Run the batch job using aws cli to register in aws bach
+<a href="https://github.com/ExamProCo/AWS-Examples/tree/main/batch">Demo</a>
+![image](https://github.com/user-attachments/assets/f18aaaff-70d6-4c38-8c52-f4bf44cd5651)
+
 
 
 
