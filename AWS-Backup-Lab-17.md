@@ -39,6 +39,26 @@ WHERE table_schema NOT IN ('information_schema', 'mysql', 'performance_schema', 
 ```
 
 
+![image](https://github.com/user-attachments/assets/ac9679a6-93b5-4eae-a9ab-414e0422ffd6)
+
+![image](https://github.com/user-attachments/assets/95eb8dcb-feaa-46f2-8d29-35d207a47c05)
+
+![image](https://github.com/user-attachments/assets/8e757ffb-545b-4cf8-aacf-4ef460ec5722)
+
+![image](https://github.com/user-attachments/assets/6baffae4-0f75-4394-9f40-1ef95480b96a)
+
+![image](https://github.com/user-attachments/assets/ad6ce477-33c3-4d25-9e6e-0f09766a7be0)
+
+![image](https://github.com/user-attachments/assets/99790733-3bc4-4a25-8df7-f53c95f20fdb)
+
+![image](https://github.com/user-attachments/assets/5b2b7e83-91f5-4b32-b589-f3eebd003227)
+
+
+
+
+
+
+
 
 
 
