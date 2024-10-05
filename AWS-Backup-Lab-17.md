@@ -26,8 +26,17 @@
 
 ![image](https://github.com/user-attachments/assets/d8fe5295-ddc8-4ba6-b274-52f1bb4c146d)
 
+Use the below templates to create RDS mysql , psql instances
+<a href="https://github.com/ExamProCo/AWS-Examples/tree/main/dms/serverless"> DMS</a>
 
+create the dms instance, migation tasks, s3 bucket and role, policies for the migartion activities. it is more complex.
 
+after migation check the table present in database for database name;
+```sh
+SELECT table_schema, table_name
+FROM information_schema.tables
+WHERE table_schema NOT IN ('information_schema', 'mysql', 'performance_schema', 'sys');
+```
 
 
 
