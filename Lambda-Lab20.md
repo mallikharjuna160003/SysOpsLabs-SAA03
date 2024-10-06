@@ -42,6 +42,86 @@
 
 ![image](https://github.com/user-attachments/assets/cb2cc842-d5c7-4d53-afd9-a97f6216775d)
 
+![image](https://github.com/user-attachments/assets/9ac2c6ea-c25d-48a4-8fa1-aac6b3e2e6a0)
+
+![image](https://github.com/user-attachments/assets/9326a355-194e-448e-a46f-19b4538c0d0e)
+
+![image](https://github.com/user-attachments/assets/cd874814-9c30-4392-a52b-191f11851b7f)
+
+![image](https://github.com/user-attachments/assets/030962ee-e479-47f9-8e4a-6bbe0b1e6a44)
+
+![image](https://github.com/user-attachments/assets/ae068b39-bac8-4947-8fd0-8d040371b9e7)
+<a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-nested-workflows.html">Docs</a>
+
+![image](https://github.com/user-attachments/assets/b726c559-c257-4ce1-8db1-bd51572bd72e)
+
+![image](https://github.com/user-attachments/assets/607be61f-809e-4ac8-bc09-50e29b06cda7)
+
+
+![image](https://github.com/user-attachments/assets/c0d284e2-aa13-42ed-b4bb-065a2e593547)
+
+![image](https://github.com/user-attachments/assets/a8fec59c-1a4c-41f5-a919-3d304db8c8c0)
+
+![image](https://github.com/user-attachments/assets/77ccb304-7564-4f65-acd7-e5f945fe623b)
+
+
+![image](https://github.com/user-attachments/assets/81098b24-1b42-4ee2-bac6-0975d995e6ef)
+
+![image](https://github.com/user-attachments/assets/7bbe3458-6d5f-4af2-8538-b2e2bbfb7620)
+
+![image](https://github.com/user-attachments/assets/7135c275-d290-4612-9424-b4cd97665a9f)
+
+![image](https://github.com/user-attachments/assets/01f67868-5cf1-4ac3-93aa-1eaa7310a4d1)
+
+![image](https://github.com/user-attachments/assets/f2ef1f62-f1ff-4270-a302-0e32bd5d4cb9)
+
+![image](https://github.com/user-attachments/assets/e3658b11-9e0d-4ed6-bfb1-6b4807645c31)
+
+<a href="https://docs.aws.amazon.com/step-functions/latest/dg/state-map.html">Docs</a>
+
+![image](https://github.com/user-attachments/assets/b1270e2f-1b69-48db-a92a-23466c69ee2d)
+
+
+![image](https://github.com/user-attachments/assets/7406e6f5-ad4b-4fa5-a7d8-e7fe685f5c36)
+
+![image](https://github.com/user-attachments/assets/6305b757-cc46-401d-b941-3afc5f0084f2)
+
+![image](https://github.com/user-attachments/assets/8480cdf8-4c78-4117-8793-fcbe548623ec)
+
+![image](https://github.com/user-attachments/assets/62feae91-faa5-4c1a-986b-9dac10c88081)
+
+![image](https://github.com/user-attachments/assets/404dc239-103e-4b4d-b5c1-ec6fafad6a6f)
+
+![image](https://github.com/user-attachments/assets/c4c7ba72-25d7-4d70-9731-d5e122d779b3)
+
+<a href="https://github.com/ExamProCo/AWS-Examples/tree/main/step-functions">Demo</a>
+
+![image](https://github.com/user-attachments/assets/950c8b99-0619-450b-ad2c-848ab8a1a326)
+
+![image](https://github.com/user-attachments/assets/cfaba4d2-4497-44a5-8662-9083ade7114c)
+
+it involves eventbrige to notify object put operation and step functions, rekognition are involved.
+
+![image](https://github.com/user-attachments/assets/447e7900-96b5-4494-a779-426e629dfe8d)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
