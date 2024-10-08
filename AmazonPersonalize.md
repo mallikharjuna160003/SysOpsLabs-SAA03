@@ -35,6 +35,58 @@
 
 ![image](https://github.com/user-attachments/assets/f3b7e27b-d3f2-4f23-8622-00eb93a8a308)
 
+# AWS Data Lake
+
+![image](https://github.com/user-attachments/assets/b4f4f476-27b9-4b47-a5b0-1a6a48d599ac)
+
+![image](https://github.com/user-attachments/assets/394ed1a4-24f2-4f39-a37b-0f0756bec941)
+
+# Open API
+
+![image](https://github.com/user-attachments/assets/c40541e4-4cc8-4329-bf19-5f6834c884bb)
+
+# APIGateway
+
+![image](https://github.com/user-attachments/assets/d68eeb9a-3e10-41a0-a657-474fa6381bd2)
+
+
+![image](https://github.com/user-attachments/assets/1b2854ec-d944-487c-84ff-1dbb1cc9f751)
+
+![image](https://github.com/user-attachments/assets/a0dd03d3-ee03-4902-a1cf-0772bb8f6e1c)
+
+![image](https://github.com/user-attachments/assets/437289f6-73c9-446b-9c01-5e9744dfaa6e)
+
+![image](https://github.com/user-attachments/assets/d0e5656e-b6e2-4344-a5c5-3b8911caa614)
+
+![image](https://github.com/user-attachments/assets/efa5065b-31e4-4243-b1ee-3a81d7d14d02)
+
+
+![image](https://github.com/user-attachments/assets/653e9f31-4d47-4a38-99f8-4eb47f0e2c86)
+
+![image](https://github.com/user-attachments/assets/439a15c7-50b9-4b40-a12d-31211656585c)
+
+![image](https://github.com/user-attachments/assets/50fff8e5-6619-4c75-8766-7f116b391f1a)
+
+![image](https://github.com/user-attachments/assets/f53679c0-1581-4e48-bd32-1fa8c7c8d898)
+
+![image](https://github.com/user-attachments/assets/18323731-14a0-435c-96f1-e098c1c497aa)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
